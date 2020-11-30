@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Note Taker</h1>
+            <h3>Add A New Note:</h3>
+        </div>
+        <div class="text-area">
+            <div class="holder">
+            <div class="top">
+            <span>Note:</span>
+            <button id="talk"><i class="fa fa-microphone"></i></button>
+            <form>
+                <input id="note" placeholder="input text" onfocus=this.value=''></input>
+              
+                <div class="dropdown">
+                    <button id="dropBtn" class="dropbtn">Groceries</button>
+                    <div id="dropCont" class="dropdown-content">
+                      <a href="#">Groceries</a>
+                      <a href="#">To-do</a>
+                      <a href="#">Remember</a>
+                    </div>
+                  </div>
+                <span id="span" class="spanNone">Field required  &#10060;</span>
+              </form> 
+              </div>          
+    <div class="buttons">
+        <button id="btn">Add Note</button>
+        <button id="btn-delete">Delete All</button>
+    </div>
+    </div>
+    <div id="groceries" class="Groceries hide"><h1 id="cardsText">Groceries</h1></div>
+    <div id="to-do" class="To-do"><h1 id="cardsText">To-do</h1></div>
+    <div id="remember" class="Remember"><h1 id="cardsText">Remember</h1></div>
+    <div class="popup">
+        <div id="popup-content">
+            <p class="popup-p"></p>
+        <div class="buttons">
+            <button id="edit">EDIT</button>
+            <button id="save">SAVE</button>
+        </div>
+        </div>
+    </div>
+</div>       
+<script type="module" src="js/main.js"></script> 
+</body>
+</html>

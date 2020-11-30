@@ -107,11 +107,11 @@ function openPopUp(e){
       
 
       if(dropButton.innerHTML === "Groceries"){
-      const get = localStorage.getItem("Groceries");
+      const get = localStorage.getItem("groceries");
       localStorage.getItem(JSON.stringify(get));    
       const obj = JSON.parse(get); 
-      console.log(key)
-      var n = obj.indexOf(key) 
+      var n = obj.indexOf(key)
+      
       obj.splice(n, 1)
       localStorage.setItem("groceries", JSON.stringify(obj));
       }
@@ -121,7 +121,6 @@ function openPopUp(e){
         const obj = JSON.parse(get); 
       
         var n = obj.indexOf(key) 
-        console.log(key)
         obj.splice(n, 1)
         localStorage.setItem("to-do", JSON.stringify(obj));
       }
@@ -131,7 +130,6 @@ function openPopUp(e){
         const obj = JSON.parse(get); 
       
         var n = obj.indexOf(key) 
-        console.log(key)
         obj.splice(n, 1)
         localStorage.setItem("remember", JSON.stringify(obj));
       }
@@ -139,10 +137,6 @@ function openPopUp(e){
     
 }
 
-
-  
-  
-  
   const popUp = document.querySelector(".popup")
   window.onclick = function(event) {
     if (event.target == popUp) {

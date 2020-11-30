@@ -16,7 +16,8 @@ const popContentArea = document.querySelector("#popup-content");
 const getText = document.querySelector(".popup-p");
 const cardsText = document.querySelector("#cardsText");
 const dropCont = document.querySelector("#dropCont");
-const talk = document.querySelector("#talk");
+const talk = document.querySelector("#speech");
+
 
 
 //-------------FUNTION CALLS----------------
@@ -64,14 +65,21 @@ recognition.onstart = function () {
 }
 recognition.onresult = function (event) {
   const current = event.resultIndex;
-
   const transcript = event.results[current][0].transcript;
   inputField.value = transcript
+  const ring = talk.children[1];
+  ring.classList.remove("pulse-ring")
   readOut(transcript)
 }
 
 talk.addEventListener('click', () => {
   recognition.start();
+    // const divAnim = document.createElement("div");
+    // divAnim.setAttribute("class", "pulse-ring");
+    // talk.appendChild(divAnim)
+    const ring = talk.children[1];
+    ring.classList.add('pulse-ring')
+    
 })
 
 

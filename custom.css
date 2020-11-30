@@ -28,8 +28,7 @@
 }
 
 .text-area{
-    align-items: center
-    
+    align-items: center  
 }
 .text-area span{
     font-weight: 600;
@@ -330,25 +329,65 @@ textarea {
 .card.dragging{
     opacity: .5;
 }
-#talk{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    padding: 2px;
-    background-color: rgb(52 152 219);
-    border:none;
-    float:right;
-    margin-bottom: 10px;
-}
-#talk:hover{
-    background-color:rgb(41 128 185);
+/* ----BUTTON FOR SPEACH STYLE------*/
+#speech.btn {
+    border: none;
+    padding: 0;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    background: rgb(52 152 219);
+    position: relative;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
     cursor: pointer;
-}
-#talk:focus{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
     outline: none;
-}
-#talk i{
-    font-size: 20px;
-    color: white;
-    line-height: 24px;
-}
+  }
+  #speech.btn:hover{
+      background-color: rgb(41 128 185);
+  }
+  .pulse-ring {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgb(41 128 185);
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: pulsate infinite 2s;
+  }
+  
+  @-webkit-keyframes pulsate {
+    0% {
+      -webkit-transform: scale(1, 1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1.2, 1.2);
+      opacity: 0;
+    }
+  }
+  .container-speech {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    float:right;
+    margin-bottom: 15px;
+  }

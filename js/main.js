@@ -74,9 +74,6 @@ recognition.onresult = function (event) {
 
 talk.addEventListener('click', () => {
   recognition.start();
-    // const divAnim = document.createElement("div");
-    // divAnim.setAttribute("class", "pulse-ring");
-    // talk.appendChild(divAnim)
     const ring = talk.children[1];
     ring.classList.add('pulse-ring')
     

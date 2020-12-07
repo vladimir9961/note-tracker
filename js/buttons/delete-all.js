@@ -7,17 +7,17 @@ function deleteAll(){
     if(dropButton.innerHTML === "Groceries")
     {
       groceriesDiv.innerHTML = "";
-      localStorage.removeItem('Groceries');
+      localStorage.removeItem('groceries');
     }
     else if(dropButton.innerHTML === "To-do")
     {
       toDoDiv.innerHTML = "";
-      localStorage.removeItem('To-do');
+      localStorage.removeItem('to-do');
     }
     else if(dropButton.innerHTML === "Remember")
     {
       rememberDiv.innerHTML = "";
-      localStorage.removeItem('Remember');
+      localStorage.removeItem('remember');
     }
   }
   export { deleteAll }
